@@ -13,6 +13,7 @@
 #    else:                           quit statement(universal)(final Possability)
 #        quit()
         
+
 def selectStart():
     i=0
     Items=("Play Now","Info","Quit")
@@ -38,12 +39,12 @@ def info():
     print("more features are coming soon")
     print("Update can be found at AviateProjects On github")
     print("Made by Oliver W.")
-    print("Version 0.0b --FuntionMap Beta--")
+    print("Version 0.1b")
     selectStart()
 
 def selectStartPort():
     i=0
-    Items=("Atlanta","London","Tokyo","Moscow","Quit") 
+    Items=("Atlanta","London","Tokyo","Sydney","Quit") 
     print("") 
     print("Starting Airports:")
     while i<len(Items):            
@@ -52,13 +53,61 @@ def selectStartPort():
     s=int(input("Select: "))
 
     if s==0:                        
-        selectPortATL()
-#    elif s==1:                     
-#        selectNode3()
+        portATL()
+    elif s==1:                     
+        portLHR()
     else:                          
         quit()
         
-def selectPortATL():
-    i=input("hello world")
+def portATL():
+    i=0
+    Items=("London","Sydney","Quit") 
+    print("") 
+    print("You are at Atlanta:")
+    while i<len(Items):            
+        print(str(i)+": "+Items[i]) 
+        i=i+1                       
+    s=int(input("Fly to: "))
+
+    if s==0:                        
+        portLHR()
+    elif s==1:                     
+        portSYD()
+    else:                          
+        quit()
+
+def portLHR():
+    i=0
+    Items=("Atlanta","Sydney","Quit") 
+    print("") 
+    print("You are at London:")
+    while i<len(Items):            
+        print(str(i)+": "+Items[i]) 
+        i=i+1                       
+    s=int(input("Fly to: "))
+
+    if s==0:                        
+        portATL()
+    elif s==1:                     
+        portSYD()
+    else:                          
+        quit()
+    
+def portSYD():
+    i=0
+    Items=("Atlanta","London","Quit") 
+    print("") 
+    print("You are at Sydney:")
+    while i<len(Items):            
+        print(str(i)+": "+Items[i]) 
+        i=i+1                       
+    s=int(input("Fly to: "))
+
+    if s==0:                        
+        portATL()
+    elif s==1:                     
+        portLHR()
+    else:                          
+        quit()
 
 selectStart()
