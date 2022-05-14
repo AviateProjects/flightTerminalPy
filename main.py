@@ -1,7 +1,7 @@
 #Made By Oliver W. 5-12-22
 #More info can be found at
 #Github.com/AviateProjects
-# VERSION 1.1
+# VERSION 1.2 using nodeMap 1.2.1 template
 
 #selecting functions
 def select2(a,b,s):
@@ -60,18 +60,18 @@ def select6(a,b,c,d,e,f,s):
         f()
     else:
         quit()
-def lister(i,Items):
+def lister(Items):
+    i=0
     while i<len(Items):
         print(str(i)+": "+Items[i])
         i=i+1
 
 #Entrance Nodes
 def start():
-    i=0
     Items=("Play Now","Info","Quit")
     print("")
     print("Welcome to Flight Transport for Python terminal")
-    lister(i,Items)
+    lister(Items)
     s=int(input("Select: "))
     select2(selectStartPort,info,s)
 def info():
@@ -85,197 +85,173 @@ def info():
     print("Version 1.1")
     start()
 def selectStartPort():
-    i=0
     Items=("Atlanta","London","Tokyo","Sydney","Quit")
     print("")
     print("Starting Airports:")
-    lister(i,Items)
+    lister(Items)
     s=int(input("Select: "))
     select4(portATL,portLHR,portHND,portSYD,s)
 
 #Airport nodes
 def portADD():
-    i=0
     Items=("Mumbai","Cairo","Cape Town","Lagos","Tunisia","Quit")
     print("")
     print("You are at Addis Adiba:")
-    lister(i,Items)
+    lister(Items)
     s=int(input("Fly to: "))
     select5(portBOM,portCAI,portCPT,portLOS,portTUN,s)
 def portATL():
-    i=0
     Items=("New York","Los Angeles","Mexico City","Quit")
     print("")
     print("You are at Atlanta:")
-    lister(i,Items)
+    lister(Items)
     s=int(input("Fly to: "))
     select3(portJFK,portLAX,portMEX,s)
 def portBGW():
-    i=0
     Items=("Mumbai","Cairo","Delhi","Istanbul","Moscow","Quit")
     print("") 
     print("You are at Bahgdad:")
-    lister(i,Items)                    
+    lister(Items)                    
     s=int(input("Fly to: "))
     select5(portBOM,portCAI,portDEL,portIST,portSVO,s)
 def portBOG():
-    i=0
     Items=("Rio De Jenero","New York","Lima","Mexico City","Quit")
     print("") 
     print("You are at Bogota:")
-    lister(i,Items)               
+    lister(Items)               
     s=int(input("Fly to: "))
     select4(portGIG,portJFK,portLIM,portMEX,s)
 def portBOM():
-    i=0
     Items=("Addis Adaba","Baghdad","Cape Town","Delhi","Hong Kong","Sydney","Quit")
     print("") 
     print("You are at Mumbai:")
-    lister(i,Items)                
+    lister(Items)                
     s=int(input("Fly to: "))
     select6(portADD,portBGW,portCPT,portDEL,portHKG,portSYD,s)
 def portCAI():
-    i=0
     Items=("Addis Adaba","Baghdad","Istanbul","Lagos","Tunisia","Quit")
     print("") 
     print("You are at Cairo:")
-    lister(i,Items)                 
+    lister(Items)                 
     s=int(input("Fly to: "))
     select5(portADD,portBGW,portIST,portLOS,portTUN,s)
 def portCPT():
-    i=0
     Items=("Addis Addiba","Mumbai","Rio De Jenero","Lagos","Sydney","Quit")
     print("") 
     print("You are at CapeTown:")
-    lister(i,Items)                   
+    lister(Items)                   
     s=int(input("Fly to: "))
     select5(portADD,portBOM,portGIG,portLOS,portSYD,s)
 def portDEL():
-    i=0
     Items=("Baghdad","Mumbai","Hong Kong","Quit")
     print("") 
     print("You are at New Delhi:")
-    lister(i,Items)     
+    lister(Items)     
     s=int(input("Fly to: "))
     select3(portBGW,portBOM,portHKG,s)
 def portGIG():
-    i=0
     Items=("Bogota","Cape Town","Lima","Lagos","Quit")
     print("") 
     print("You are at Rio De Jenero:")
-    lister(i,Items)               
+    lister(Items)               
     s=int(input("Fly to: "))
     select4(portBOG,portCPT,portLIM,portLOS,s)
 def portHKG():
-    i=0
     Items=("Mumbai","Delhi","Tokyo","Honolulu","Bejing","Sydney","Quit")
     print("") 
     print("You are at Hong Kong:")
-    lister(i,Items)                
+    lister(Items)                
     s=int(input("Fly to: "))
     select6(portBOM,portDEL,portHND,portHNL,portPEK,portSYD,s)
 def portHND():
-    i=0
     Items=("Hong Kong","Honalulu","Bejing","Sydney","Quit") 
     print("") 
     print("You are at Tokyo:")
-    lister(i,Items)                 
+    lister(Items)                 
     s=int(input("Fly to: "))
     select4(portHKG,portHNL,portPEK,portSYD,s)
 def portHNL():
-    i=0
     Items=("Hong Kong","Tokyo","Los Angeles","Lima","Mexico City","Sydney","Quit") 
     print("") 
     print("You are at Hong Kong:")
-    lister(i,Items)                     
+    lister(Items)                     
     s=int(input("Fly to: "))
     select6(portHKG,portHND,portLAX,portLIM,portMEX,portSYD,s)
 def portIST():
-    i=0
     Items=("Baghdad","Cairo","London","Moscow","Tunisia","Quit") 
     print("") 
     print("You are at Istanbul:")
-    lister(i,Items)                 
+    lister(Items)                 
     s=int(input("Fly to: "))
     select5(portBGW,portCAI,portLHR,portSVO,portTUN,s)
 def portJFK():
-    i=0
     Items=("Atlanta","Bogota","London","Lagos","Quit") 
     print("") 
     print("You are at New York:")
-    lister(i,Items)           
+    lister(Items)           
     s=int(input("Fly to: "))
     select4(portATL,portBOG,portLHR,portLOS,s)
 def portLAX():
-    i=0
     Items=("Atlanta","Honolulu","Mexico City","Quit") 
     print("") 
     print("You are at Los Angeles:")
-    lister(i,Items)                
+    lister(Items)                
     s=int(input("Fly to: "))
     select3(portATL,portHNL,portMEX,s)
 def portLHR():
-    i=0
     Items=("Istanbul","New York","Moscow","Tunisia","Quit") 
     print("") 
     print("You are at London:")
-    lister(i,Items)                           
+    lister(Items)                           
     s=int(input("Fly to: "))
     select4(portIST,portJFK,portSVO,portTUN,s)
 def portLIM():
-    i=0
     Items=("Bogota","Rio De Jenero","Honalulu","Quit") 
     print("") 
     print("You are at Lima:")
-    lister(i,Items)                    
+    lister(Items)                    
     s=int(input("Fly to: "))
     select3(portBOG,portGIG,portHNL,s)
 def portLOS():
-    i=0
     Items=("Addis Addiba","Cairo","Cape Town","Rio De Jenero","New York","Quit") 
     print("") 
     print("You are at Lagos:")
-    lister(i,Items)                       
+    lister(Items)                       
     s=int(input("Fly to: "))
     select5(portADD,portCAI,portCPT,portGIG,portJFK,s)
 def portMEX():
-    i=0
     Items=("Atlanta","Bogota","Honalulu","Los Angles","Quit") 
     print("") 
     print("You are at Mexico City:")
-    lister(i,Items)       
+    lister(Items)       
     s=int(input("Fly to: "))
     select4(portATL,portBOG,portHNL,portLAX,s)
 def portPEK():
-    i=0
     Items=("Hong Kong","Honalulu","Moscow","Quit") 
     print("") 
     print("You are at Bejing:")
-    lister(i,Items)           
+    lister(Items)           
     s=int(input("Fly to: "))
     select3(portHKG,portHNL,portSVO,s)
 def portSVO():
-    i=0
     Items=("Bahgdad","Istanbul","London","Bejing","Quit") 
     print("") 
     print("You are at Moscow:")
-    lister(i,Items)           
+    lister(Items)           
     s=int(input("Fly to: "))
     select4(portBGW,portIST,portLHR,portPEK,s)
 def portSYD():
-    i=0
     Items=("Mumbai","Cape Town","Hong Kong","Honnalulu","Quit") 
     print("") 
     print("You are at Sydney:")
-    lister(i,Items)            
+    lister(Items)            
     s=int(input("Fly to: "))
     select4(portBOM,portCPT,portHKG,portHNL,s)
 def portTUN():
-    i=0
     Items=("Addis Addiba","Cairo","Istanbul","London","Quit") 
     print("") 
     print("You are at Tunisia:")
-    lister(i,Items)        
+    lister(Items)        
     s=int(input("Fly to: "))
     select4(portADD,portCAI,portIST,portLAX,s)
     
