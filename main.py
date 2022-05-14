@@ -1,7 +1,7 @@
 #Made By Oliver W. 5-12-22
 #More info can be found at
 #Github.com/AviateProjects
-# VERSION 1.2 using nodeMap 1.2.1 template
+# VERSION 1.2.1 using nodeMap 1.2.1 template
 
 #selecting functions
 def select2(a,b,s):
@@ -82,7 +82,7 @@ def info():
     print("more features are coming soon")
     print("Update can be found at AviateProjects On github")
     print("Made by Oliver W.")
-    print("Version 1.1")
+    print("Version 1.2.1")
     start()
 def selectStartPort():
     Items=("Atlanta","London","Tokyo","Sydney","Quit")
